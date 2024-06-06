@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operasi Matriks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sistem Operasi Matriks</h1>
+    <div class="menu">
+        <button onclick="showOperation('add')">Penjumlahan</button>
+        <button onclick="showOperation('subtract')">Pengurangan</button>
+        <button onclick="showOperation('multiply')">Perkalian</button>
+    </div>
+
+    <div id="matrix-input">
+        <label for="rows">Jumlah Baris: </label>
+        <input type="number" id="rows" min="1" value="2">
+        <label for="cols">Jumlah Kolom: </label>
+        <input type="number" id="cols" min="1" value="2">
+        <button onclick="generateMatrices()">Buat Matriks</button>
+    </div>
+
+    <div id="matrices-container"></div>
+
+    <div id="result-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

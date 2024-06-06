@@ -1,0 +1,79 @@
+/* Mengatur elemen dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Mengatur tampilan body */
+body {
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    /* Minimal setinggi viewport */
+    margin: 0;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    /* Untuk menggunakan overlay */
+}
+
+
+/* Menambahkan overlay pada body */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* Warna hitam dengan transparansi 50% */
+    z-index: -1;
+    /* Membuat overlay di belakang konten */
+    backdrop-filter: blur(5px);
+    /* Efek blur */
+}
+
+/* Mengatur tampilan menu dan konten */
+.menu button,
+#matrix-input,
+#result-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Latar belakang putih dengan transparansi */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+}
+
+/* Mengatur tampilan tombol di menu */
+#matrix-input label,
+#matrix-input input,
+#matrix-input button {
+    margin: 5px;
+}
+
+.matrix input {
+    width: 50px;
+    margin: 2px;
+    display: block; /* Mengubah input menjadi blok untuk vertikal */
+}
+
+#result-container {
+    font-weight: bold;
+    padding: 20px;
+}
+
+#matrices-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.matrix {
+    margin: 10px;
+    display: flex;
+    flex-direction: column; /* Mengatur konten dalam matriks menjadi vertikal */
+}
